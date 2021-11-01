@@ -35,3 +35,7 @@ Para desligar as máquinas virtuais, utilize o comando abaixo:
 ```
 vagrant halt
 ```
+### ✋ Observação 
+Caso queira alterar o nome da imagem, acesse o site https://app.vagrantup.com/boxes/search
+
+<center><h6>robson-devops @2021<h6></center>
