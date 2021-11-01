@@ -13,12 +13,12 @@ Utilize esse projeto para criar três máquinas virtuais, utilizando o VirtualBo
 
 |COMANDO| DESCRIÇÃO
 |------|------
-|vagrant init| Inicializa e cria o arquivo vagrantfile
-|vagrant up| Inicialização as máquinas virtuais
+|vagrant init| Cria o arquivo vagrantfile
+|vagrant up| Inicializa as máquinas virtuais
 |vagrant halt| Desliga as máquinas virtuais
 |vagrant ssh <maq.virtual>| Acessa a máquina virtual
-|vagrant box list| Exibe as lista de imagens
-|vagrant destroy <maq.virtual>| Exibe as lista de imagens
+|vagrant box list| Exibe uma lista de imagens
+|vagrant destroy <maq.virtual>| Destrói a máquina virtual
 
 ### 🖥️ Execução do projeto
 Após a instalação do VirtualBox e do Vagrant, digite o comando ``vagrant up``. Para acessar uma das máquinas recém criadas, digite o comando ``vagrant ssh <nome_vm>``.
