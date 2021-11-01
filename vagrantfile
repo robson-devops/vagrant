@@ -2,36 +2,45 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-    config.vm.provision "shell", inline: "echo Máquina virtual criada com sucesso!"
+    config.vm.provision "shell", inline: "echo Maquina virtual criada com sucesso!"
   
     config.vm.define "master" do |master|
-      master.vm.box = "ubuntu/trusty64"
+      master.vm.box = "ubuntu/bionic64"
       master.vm.hostname = "master"
       #master.vm.network "private_network", ip: "10.20.20.#{conf["ip"]}"
       master.vm.provider "virtualbox" do |vb|
+          vb.name = "Master"
           vb.memory = 2048
           vb.cpus = 2
       end
     end
   
     config.vm.define "node01" do |node01|
-      node01.vm.box = "ubuntu/trusty64"
+      node01.vm.box = "ubuntu/bionic64"
       node01.vm.hostname = "node01"
       #node01.vm.network "private_network", ip: "10.20.20.#{conf["ip"]}"
       node01.vm.provider "virtualbox" do |vb|
+          vb.name = "Node01" 
           vb.memory = 2048
           vb.cpus = 2
       end
     end
   
     config.vm.define "node02" do |node02|
-      node02.vm.box = "ubuntu/trusty64"
+      node02.vm.box = "ubuntu/bionic64"
       node02.vm.hostname = "node02"
       #node02.vm.network "private_network", ip: "10.20.20.#{conf["ip"]}"
       node02.vm.provider "virtualbox" do |vb|
+          vb.name = "Node02"
           vb.memory = 2048
           vb.cpus = 2
       end
   
     end
+ 
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update -y
+        
+  SHELL
   end
+
