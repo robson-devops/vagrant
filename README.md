@@ -15,11 +15,13 @@ Utilize esse projeto para criar três máquinas virtuais, utilizando o VirtualBo
 
 |COMANDO| DESCRIÇÃO
 |------|------
-|vagrant init| Cria o arquivo vagrantfile
-|vagrant up| Inicializa as máquinas virtuais
-|vagrant halt| Desliga as máquinas virtuais
+|vagrant init             | Cria o arquivo vagrantfile
+|vagrant up               | Inicializa todas as máquinas virtuais
+|vagrant up --provision nome_vm1 nome_vm2 | Provisiona apenas as máquinas virtuais informadas
+|vagrant status           | Exibe as máquinas virtuais
+|vagrant halt             | Desliga as máquinas virtuais
 |vagrant ssh <maq.virtual>| Acessa a máquina virtual
-|vagrant box list| Exibe uma lista de imagens
+|vagrant box list         | Exibe uma lista de imagens
 |vagrant destroy <maq.virtual>| Destrói a máquina virtual
 
 ### 🖥️ Execução do projeto
@@ -46,11 +48,9 @@ Para desligar as máquinas virtuais, utilize o comando abaixo:
 vagrant halt
 ```
 ### ✋ Observação 
-Caso queira alterar o nome da imagem, acesse o site https://app.vagrantup.com/boxes/search 
+Caso queira alterar a imagem que será instalada na VM, acesse o site https://app.vagrantup.com/boxes/search 
 
 Se ocorrer erro na execução do comando ``vagrant up``, desabilite seu antivirus.
 
-
-Agradeço pela colaboração do [everson2s](https://github.com/everson2s) por ter customizado o arquivo _vagrantfile_
 
 <center><h6>robson-devops @2022<h6></center>
